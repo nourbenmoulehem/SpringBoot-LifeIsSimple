@@ -50,5 +50,12 @@ public class TransactionController {
     }
 
 
+    @DeleteMapping
+    public ResponseEntity<String> deleteTransaction(@RequestParam int id) {
+        transactionService.deleteTransaction(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Deleted");
+    }
+
+
 
 }

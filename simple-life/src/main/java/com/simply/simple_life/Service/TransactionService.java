@@ -130,8 +130,8 @@ public class TransactionService {
         return transactionsRepository.save(transaction);
     }
 
-    public void deleteTransaction(Transactions transaction) {
-        transactionsRepository.delete(transaction);
+    public void deleteTransaction(int id) {
+        transactionsRepository.deleteById(id);
     }
 
 
